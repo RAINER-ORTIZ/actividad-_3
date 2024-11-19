@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DivisApp SUNUMERO DE CARNET</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Conversor de Quetzales a Dólares</h2>
+  <ion-item>
+    <ion-label position="floating">Cantidad en Quetzales</ion-label>
+    <ion-input [(ngModel)]="cantidad" type="number"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="convertir()">Convertir</ion-button>
+  <div *ngIf="resultado !== null">
+    <h3>Equivalente en Dólares: {{ resultado | currency:'USD' }}</h3>
+  </div>
+</ion-content>
